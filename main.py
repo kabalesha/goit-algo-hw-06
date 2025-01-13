@@ -1,16 +1,23 @@
-# This is a sample Python script.
+class Animal:
+    color = "white"
 
-# Press ⌃R to execute it or replace it with your code.
-# Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
+    def __init__(self, nickname, weight):
+        self.nickname = nickname
+        self.weight = weight
 
+    def say(self):
+        pass
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press ⌘F8 to toggle the breakpoint.
+    def change_weight(self, weight):
+        self.weight = weight
 
+    @classmethod
+    def change_color(cls, new_color):
+        cls.color = new_color
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
+first_animal = Animal("Alex", 200)
+first_animal.change_color("red")
+second_animal = Animal("John", 150)
+second_animal.change_color("green")
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+print(first_animal)
